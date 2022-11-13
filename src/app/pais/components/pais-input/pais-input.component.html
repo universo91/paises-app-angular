@@ -1,0 +1,14 @@
+<form (ngSubmit)="buscar()" autocomplete="off">
+  <!-- (input) es un evento -->
+  <!-- 1. el evento input nos permite escuchar los cambios que ocurren dentro del elemento <input>
+  2. Cuando el usuario realiza cambios, el componente genera el inputevento. -->
+  <input
+    ngDefaultControl
+    type="text"
+    name="termino"
+    class="form-control"
+    [placeholder]="placeholder"
+    [(ngModel)]="terminoABuscar"
+    (input)="teclaPresionada()"
+  />
+</form>
